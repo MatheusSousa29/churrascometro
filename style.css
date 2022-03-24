@@ -1,0 +1,36 @@
+body{
+  background-image: url(./assets/fire.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.container{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 300px;
+    margin: auto;
+    background-color: rgb(211, 54, 27);  
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .titulo{
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 300px;
+    margin: 30px auto;
+    background-color: rgb(211, 54, 27);  
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  input{
+    width: 100%;
+    display: block;
+    padding: 5px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+    border-radius: 10px;
+  }
+
+  button{
+    border-radius: 10px;
+  }
