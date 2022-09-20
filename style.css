@@ -37,6 +37,11 @@ body{
 
   button{
     border-radius: 10px;
+    transition: transform .3s;
+  }
+
+  button:hover {
+    transform: scale(1.1);
   }
 
   @keyframes fromPage {
