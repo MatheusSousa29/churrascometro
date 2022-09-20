@@ -4,6 +4,7 @@ body{
   background-size: cover;
 
 }
+
 .container{
     font-family: Arial, Helvetica, sans-serif;
     max-width: 300px;
@@ -22,6 +23,9 @@ body{
     border-radius: 10px;
   }
 
+  div {
+    animation: fromPage .7s .2s backwards;
+  }
   input{
     width: 100%;
     display: block;
@@ -33,4 +37,16 @@ body{
 
   button{
     border-radius: 10px;
+  }
+
+  @keyframes fromPage {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
