@@ -1,59 +1,58 @@
-body{
+body {
   background-image: url(./assets/fire.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #0e0e0e;
 }
 
-.container{
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 300px;
-    margin: auto;
-    background-color: rgb(211, 54, 27);   
-    padding: 20px;
-    border-radius: 10px;
-    
-  }
-  
-  .titulo{
-    font-family: Arial, Helvetica, sans-serif;
-    max-width: 300px;
-    margin: 30px auto;
-    background-color: rgb(211, 54, 27);  
-    padding: 20px;
-    border-radius: 10px;
-    
+div {
+  animation: fromPage 0.7s 0.2s backwards;
+}
+
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 300px;
+  margin: auto;
+  background-color: rgb(211, 54, 27);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.titulo {
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 300px;
+  margin: 30px auto;
+  background-color: rgb(211, 54, 27);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+input {
+  width: 100%;
+  display: block;
+  padding: 5px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes fromPage {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
   }
 
-  div {
-    animation: fromPage .7s .2s backwards;
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
-  input{
-    width: 100%;
-    display: block;
-    padding: 5px;
-    box-sizing: border-box;
-    margin-bottom: 10px;
-    border-radius: 10px;
-  }
-
-  button{
-    border-radius: 10px;
-    transition: transform .3s;
-  }
-
-  button:hover {
-    transform: scale(1.1);
-  }
-
-  @keyframes fromPage {
-    from {
-      opacity: 0;
-      transform: translateX(-30px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateX(0);
-    }
-  }
+}
