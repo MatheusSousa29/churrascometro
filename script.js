@@ -1,28 +1,26 @@
-let inputAdultos = document.getElementById("adultos");
-let inputCriancas = document.getElementById("criancas");
-let inputDuracao = document.getElementById("duracao");
+let inputAdultos = document.querySelector("#adultos");
+let inputcriancas = document.querySelector("#criancas");
+let inputduracao = document.querySelector("#duracao");
 
-let resultado = document.getElementById("resultado");
+let inputresultado = document.querySelector("#resultado");
 
-const calcular = () => {
-  console.log("Calculando...")
-  
-  let adultos = inputAdultos.value;
-  let criancas = inputCriancas.value;
-  let duracao = inputDuracao.value;
+calcular = () => {
+    let adultos = inputAdultos.value;
+    let criancas = inputcriancas.value;
+    let duracao = inputduracao.value;
+    let carne = carnePorPessoa(duracao);
 
-  
-  let qdtTotalCarne = carnePP(duracao) * adultos + (carnePP(duracao) / 2 * criancas);
-  let qdtTotalCerveja = cervejaPP(duracao) * adultos;
-  let qdtTotalBebidas = bebidasPP(duracao) * adultos + (bebidasPP(duracao) / 2 * criancas);
-  
-  resultado.innerHTML = `<p><b>${qdtTotalCarne / 1000} Kg de Carne</b></p>`
-  resultado.innerHTML += `<p><b>${Math.ceil(qdtTotalCerveja / 355)} Latas de cerveja</b></p>`
-  resultado.innerHTML += `<p><b>${Math.ceil(qdtTotalBebidas / 2000)} Pet's 2 Litros de Refrigerante</b></p>`
- 
+    let qtdTotalCarne = carne * adultos + (carne / 2 * criancas);
+    let qtdTotalCerveja = cervejaPorPessoa(duracao) * adultos;
+    let qtdTotalbebidas = bebidasPorPessoa(duracao) * adultos + (bebidasPorPessoa(duracao) / 2 * criancas);
+
+    resultado.innerHTML = `<p>${qtdTotalCarne / 1000}kg de carne</p>`;
+    resultado.innerHTML += `<p>${Math.ceil(qtdTotalCerveja / 355)} latas de cerveja</p>`;
+    resultado.innerHTML += `<p>${Math.ceil(qtdTotalbebidas / 2000)} Pet's 2l de bebida</p>`;
+
 }
 
-const carnePP = (duracao) => {
+carnePorPessoa = () => {
     if (duracao >= 6) {
         return 650;
     } else {
@@ -30,7 +28,7 @@ const carnePP = (duracao) => {
     }
 }
 
-const cervejaPP = (duracao) => {
+cervejaPorPessoa = () => {
     if (duracao >= 6) {
         return 2000;
     } else {
@@ -38,12 +36,10 @@ const cervejaPP = (duracao) => {
     }
 }
 
-const bebidasPP = (duracao) => {
+bebidasPorPessoa = () => {
     if (duracao >= 6) {
         return 1500;
     } else {
         return 1000;
     }
 }
-
-

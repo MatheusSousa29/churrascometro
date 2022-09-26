@@ -1,39 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    <title>Churrascômetro</title>
-  </head>
 
-  <body>
-    <div class="titulo">
-      <h1>Churrascômetro</h1>
-    </div>
-    <div class="container">
-      <input
-        id="adultos"
-        name="adultos"
-        type="number"
-        placeholder="Quantidade de adultos"
-      />
-      <input
-        id="criancas"
-        name="criancas"
-        type="number"
-        placeholder="Quantidade de Crianças"
-      />
-      <input
-        id="duracao"
-        name="duracao"
-        type="number"
-        placeholder="Duração do churrasco (h)"
-      />
-      <button onclick="calcular()">Calcular</button>
-      <div id="resultado"></div>
-    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Churrascometro</title>
+</head>
+
+<body>
+    <header>
+        <h1 id="containerHeader">Churrascometro</h1>
+    </header>
+    <main id="containerPrincipal">
+        <input id="adultos" type="number" name="adultos" placeholder="Adultos">
+        <input id="criancas" type="number" name="criancas" placeholder="Criancas">
+        <input id="duracao" type="number" name="duracao" placeholder="Duracao (hrs)">
+
+        <button onclick="calcular()">Calcular</button>
+
+        <section id="resultado">
+
+        </section>
+    </main>
+
     <script src="./script.js"></script>
-  </body>
+</body>
+
 </html>

@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-image: url(./assets/fire.jpg);
   background-repeat: no-repeat;
@@ -5,54 +11,71 @@ body {
   background-color: #0e0e0e;
 }
 
-div {
-  animation: fromPage 0.7s 0.2s backwards;
-}
-
-.container {
+#containerHeader {
+/* Titulo do churrascometro */
   font-family: Arial, Helvetica, sans-serif;
   max-width: 300px;
   margin: auto;
-  background-color: rgb(211, 54, 27);
+  background-color: #7e0b0b;
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 30px;
+  animation: frontProject .3s;
+
 }
 
-.titulo {
+#containerPrincipal {
+/* Parte principal do projeto */
   font-family: Arial, Helvetica, sans-serif;
   max-width: 300px;
-  margin: 30px auto;
-  background-color: rgb(211, 54, 27);
+  margin: auto;
+  background-color: #7e0b0b;
   padding: 20px;
   border-radius: 10px;
+  animation: frontProject .3s;
+
 }
 
+
 input {
-  width: 100%;
   display: block;
+  width: 100%;
   padding: 5px;
-  box-sizing: border-box;
   margin-bottom: 10px;
-  border-radius: 10px;
+
+  transition: transform .3s;
+  border-radius: 5px;
+}
+
+input:hover {
+  transform: scale(1.1)
 }
 
 button {
-  border-radius: 10px;
-  transition: transform 0.3s;
+  display: block;
+  width: 50%;
+  padding: 5px;
+  margin: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+
+  transition: transform .3s;
 }
 
 button:hover {
-  transform: scale(1.1);
+  transform: scale(1.1)
 }
 
-@keyframes fromPage {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
+/* Animation */
+  @keyframes frontProject {
+      from {
+          opacity: 0;
+          transform: translateX(-110px);
+      }
+
+      to {
+          opacity: 1;
+          transform: translateX(0);
+      }
   }
 
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
